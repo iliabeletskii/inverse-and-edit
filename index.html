@@ -57,7 +57,47 @@
   <div class="human-study"><div><p class="eyebrow">HUMAN PREFERENCE STUDY</p><h3>Edits people prefer.</h3><p>On Z-Image-Turbo, the method is preferred for overall quality and preservation against four flow editors. Prompt matching is closer to parity and dominated by ties.</p><p class="tiny">200 pairwise comparisons across 50 images. Two initial annotators; expert adjudication of disagreements. Score = wins + ½ ties; 50% is parity. Table 3 and Appendix B.</p></div><div class="preference-bars"><div class="preference"><div><span>Overall preference</span><strong>76.3%</strong></div><div class="track"><span style="width:76.3%"></span></div></div><div class="preference"><div><span>Source preservation</span><strong>78.8%</strong></div><div class="track"><span style="width:78.8%"></span></div></div><div class="preference"><div><span>Prompt match</span><strong>58.5%</strong></div><div class="track"><span style="width:58.5%"></span></div></div><div class="parity-label"><span>0%</span><span>50% · parity</span><span>100%</span></div></div></div>
 </div></section>
 
-<section class="shell section citation-section" id="citation"><div><p class="eyebrow">RESOURCES</p><h2>Build on<br><em>this work.</em></h2><div class="resource-links"><a href="assets/inverse-and-edit.pdf" target="_blank" rel="noopener">Current manuscript <span>PDF ↗</span></a></div><p class="tiny">Code will be available soon.</p></div><div class="citation-box citation-empty"><div class="citation-top"><span>BibTeX</span></div><pre id="bibtex"></pre></div></section>
+<section class="shell section citation-section" id="citation"><div><p class="eyebrow">RESOURCES</p><h2>Build on<br><em>this work.</em></h2><div class="resource-links"><a href="assets/inverse-and-edit.pdf" target="_blank" rel="noopener">Current manuscript <span>PDF ↗</span></a></div><p class="tiny">Code will be available soon.</p></div><div class="citation-box" style="min-width: 0">
+  <div class="citation-top"><span>BibTeX</span><button type="button" id="cite-copy-bibtex" hidden>Copy BibTeX</button></div>
+  <pre id="bibtex" aria-label="BibTeX citation" style="white-space: pre-wrap; overflow-wrap: anywhere"><code>@misc{beletskii2026inverseandeditsimpleeffectiveframework,
+  title={Inverse-and-Edit: Simple and Effective Framework for Fast Image Editing},
+  author={Ilia Beletskii and Andrey Kuznetsov and Aibek Alanov},
+  year={2026},
+  eprint={2506.19103},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2506.19103},
+}</code></pre>
+  <span class="sr-only" id="cite-copy-status" role="status"></span>
+  <script>
+    (() => {
+      const button = document.getElementById('cite-copy-bibtex');
+      const entry = document.querySelector('#bibtex code');
+      const status = document.getElementById('cite-copy-status');
+      let reset;
+      button.hidden = false;
+      button.addEventListener('click', async () => {
+        clearTimeout(reset);
+        try {
+          await navigator.clipboard.writeText(entry.textContent);
+          button.textContent = 'Copied!';
+          status.textContent = 'BibTeX copied to clipboard.';
+        } catch {
+          const selection = window.getSelection();
+          if (selection) {
+            const range = document.createRange();
+            range.selectNodeContents(entry);
+            selection.removeAllRanges();
+            selection.addRange(range);
+          }
+          button.textContent = 'Use your device’s Copy command';
+          status.textContent = 'Use your device’s Copy command to copy the citation.';
+        }
+        reset = setTimeout(() => { button.textContent = 'Copy BibTeX'; status.textContent = ''; }, 3000);
+      });
+    })();
+  </script>
+</div></section>
 </main>
 <footer class="shell"><a class="wordmark" href="#">Inverse<span>↔</span>Edit</a><p>Ilia Beletskii · Andrey Kuznetsov · Aibek Alanov<br>Research images and results from the accompanying paper.</p><a class="text-link" href="#">Back to top ↑</a></footer>
 </body></html>
